@@ -1,0 +1,52 @@
+INFO 2025-01-13 19:49:24,283 basehttp "GET / HTTP/1.1" 200 14
+INFO 2025-01-13 19:49:38,264 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+INFO 2025-01-13 19:50:50,170 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+INFO 2025-01-13 19:50:50,600 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+INFO 2025-01-13 19:50:50,720 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+INFO 2025-01-13 19:50:50,862 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+INFO 2025-01-13 19:51:14,270 views The old products page was accessed
+INFO 2025-01-13 19:51:14,410 basehttp "GET /project/products/ HTTP/1.1" 200 734
+INFO 2025-01-13 19:51:15,205 views The old products page was accessed
+INFO 2025-01-13 19:51:15,248 basehttp "GET /project/products/ HTTP/1.1" 200 734
+INFO 2025-01-13 19:51:15,360 views The old products page was accessed
+INFO 2025-01-13 19:51:15,395 basehttp "GET /project/products/ HTTP/1.1" 200 734
+INFO 2025-01-13 19:51:16,648 views The old products page was accessed
+INFO 2025-01-13 19:51:16,689 basehttp "GET /project/products/ HTTP/1.1" 200 734
+INFO 2025-01-13 19:51:16,819 views The old products page was accessed
+INFO 2025-01-13 19:51:16,950 views The old products page was accessed
+INFO 2025-01-13 19:51:16,965 basehttp - Broken pipe from ('127.0.0.1', 61416)
+INFO 2025-01-13 19:51:16,986 basehttp "GET /project/products/ HTTP/1.1" 200 734
+INFO 2025-01-13 19:56:01,811 basehttp "GET /project/contact/ HTTP/1.1" 200 2169
+INFO 2025-01-13 19:56:28,243 basehttp "POST /project/contact/ HTTP/1.1" 302 0
+INFO 2025-01-13 19:56:28,253 basehttp "GET /project/contact HTTP/1.1" 301 0
+INFO 2025-01-13 19:56:28,264 basehttp "GET /project/contact/ HTTP/1.1" 200 2169
+INFO 2025-01-13 19:59:54,104 basehttp "POST /project/contact/ HTTP/1.1" 200 2981
+INFO 2025-01-13 20:00:06,258 basehttp "POST /project/contact/ HTTP/1.1" 302 0
+INFO 2025-01-13 20:00:06,265 basehttp "GET /project/contact HTTP/1.1" 301 0
+INFO 2025-01-13 20:00:06,277 basehttp "GET /project/contact/ HTTP/1.1" 200 2169
+INFO 2025-01-13 20:00:47,765 basehttp "GET /project/filter_products/ HTTP/1.1" 200 1886
+ERROR 2025-01-14 18:57:35,497 views LOGIN: User allready logged in tries a new login
+ERROR 2025-01-14 19:49:04,581 views LOGIN: User allready logged in tries a new login
+INFO 2025-01-14 21:06:26,617 views The old products page was accessed
+INFO 2025-01-14 21:11:18,294 views The old products page was accessed
+INFO 2025-01-15 00:10:40,206 views The old products page was accessed
+INFO 2025-01-15 00:11:31,566 views The old products page was accessed
+WARNING 2025-01-15 22:35:42,654 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:21,296 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:26,758 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:28,037 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:28,549 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:28,726 views REGISTER: Registration failed
+WARNING 2025-01-15 22:37:41,619 views REGISTER: Registration failed
+WARNING 2025-01-15 22:38:01,297 views REGISTER: Registration failed
+WARNING 2025-01-15 22:38:01,435 views REGISTER: Registration failed
+WARNING 2025-01-15 22:38:01,608 views REGISTER: Registration failed
+WARNING 2025-01-15 22:38:01,751 views REGISTER: Registration failed
+WARNING 2025-01-15 22:38:03,664 views REGISTER: Registration failed
+WARNING 2025-01-15 22:40:00,999 views REGISTER: Registration failed
+WARNING 2025-01-15 22:41:07,337 views REGISTER: Registration failed
+INFO 2025-01-15 22:46:11,345 views The old products page was accessed
+ERROR 2025-01-16 10:35:52,098 views LOGIN: User allready logged in tries a new login
+INFO 2025-01-16 10:36:26,604 views ADD REVIEW: Review added successfully!
+INFO 2025-01-16 10:43:18,307 views ADD REVIEW: Review added successfully!
+INFO 2025-01-16 10:45:08,230 views ADD REVIEW: Review added successfully!

@@ -1,0 +1,10 @@
+{
+    "firstName": "A",
+    "lastName": "Andrei",
+    "age": "20 years and 9 months",
+    "email": "aa@mail.com",
+    "messageType": "c",
+    "subject": "AB",
+    "minWaitDays": 3.0,
+    "message": null
+}

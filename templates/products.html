@@ -1,0 +1,24 @@
+<!-- templates/products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products by name</h1>
+    <ul>
+        {% for product in product_names %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+        
+    </ul>
+    <h1>Products by price</h1>
+    <ul>
+        {% for el in product_prices %}
+            <li>{{el.name}} - {{el.price}}</li>         
+        {% endfor %}
+    </ul>
+</body>
+</html>

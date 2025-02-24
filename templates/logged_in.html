@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilizator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .profile-container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            background: #e9ecef;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn-container a {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="profile-container">
+        <h1>Welcome, {{ username }}!</h1>
+        <h2>Your credentials:</h2>
+        <ul>
+            <li>First Name: {{ first_name }}</li>
+            <li>Last Name: {{ last_name }}</li>
+            <li>Email: {{ email }}</li>
+            <li>Phone: {{ phone }}</li>
+            <li>Zip Code: {{ zip_code }}</li>
+            <li>Address: {{ address }}</li>
+            <li>City: {{ city }}</li>
+            <li>County: {{ county }}</li>
+            <!-- Adauga alte date relevante aici -->
+        </ul>
+        <div class="btn-container">
+            <a href="{% url 'passwordChange' %}" class="btn btn-primary">Change password</a>
+            <a href="{% url 'logoutView' %}" class="btn btn-secondary">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

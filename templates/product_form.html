@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #e9ecef;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a.btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container">
+
+        <h1>Filter Products</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' value='Apply Filters' class="btn btn-primary"/>
+        </form>
+
+        <h1>Products with Applied Filters</h1>
+        <ul>
+            {% for product in products %}
+                <li>
+                    <span>{{ product.name }} - {{ product.description }} - ${{ product.price }}</span>
+                    <a href="/project/product/{{ product.id }}" class="btn btn-secondary">View Product</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

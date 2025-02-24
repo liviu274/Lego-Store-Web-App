@@ -1,0 +1,46 @@
+<!-- filepath: /c:/Users/Liviu/Documents/django/templates/special_offer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .offer-container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .offer-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .offer-container p {
+            font-size: 1.2rem;
+        }
+        .offer-container .btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="offer-container">
+        <h1>Special Offer Just for You, {{ user.username }}!</h1>
+        <p>We are excited to offer you a 50% discount on all products. This is a limited-time offer, so don't miss out!</p>
+        <p>Please note that if you logout you will loose access to the special offer!</p>
+        <p>Use the code <strong>SPECIAL50</strong> at checkout to avail the discount.</p>
+        <a href="/project/filter_products" class="btn btn-primary">Shop Now</a>
+    </div>
+</body>
+</html>

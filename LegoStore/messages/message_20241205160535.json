@@ -1,0 +1,10 @@
+{
+    "firstName": "Popescu",
+    "lastName": "Andrei",
+    "age": "20 years and 9 months",
+    "email": "liviu.prioteasa.274@gmail.com",
+    "messageType": "r",
+    "subject": "This is subject",
+    "minWaitDays": 3.0,
+    "message": null
+}

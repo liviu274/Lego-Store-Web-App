@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <style>
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .product img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .product-name {
+            flex: 1;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-controls input {
+            width: 50px;
+            text-align: center;
+        }
+        .quantity-controls button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Basket</h1>
+    <div id="basket"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const basket = JSON.parse(localStorage.getItem('basket')) || [];
+            const basketContainer = document.getElementById('basket');
+
+            function renderBasket() {
+                basketContainer.innerHTML = '';
+                basket.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.className = 'product';
+                    productDiv.innerHTML = `
+                        <div class="product-name">${product.name}</div>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity(${product.id}, -1)">-</button>
+                            <input type="number" value="${product.quantity}" onchange="setQuantity(${product.id}, this.value)">
+                            <button onclick="updateQuantity(${product.id}, 1)">+</button>
+                        </div>
+                        <button onclick="removeFromBasket(${product.id})">Remove</button>
+                    `;
+                    basketContainer.appendChild(productDiv);
+                });
+            }
+
+            window.updateQuantity = function(productId, change) {
+                const product = basket.find(p => p.id === productId);
+                if (product) {
+                    product.quantity += change;
+                    if (product.quantity <= 0) {
+                        removeFromBasket(productId);
+                    } else {
+                        localStorage.setItem('basket', JSON.stringify(basket));
+                        renderBasket();
+                    }
+                }
+            };
+
+            window.setQuantity = function(productId, quantity) {
+                const product = basket.find(p => p.id === productId);
+                if (product) {
+                    product.quantity = parseInt(quantity, 10);
+                    if (product.quantity <= 0) {
+                        removeFromBasket(productId);
+                    } else {
+                        localStorage.setItem('basket', JSON.stringify(basket));
+                        renderBasket();
+                    }
+                }
+            };
+
+            window.removeFromBasket = function(productId) {
+                const index = basket.findIndex(p => p.id === productId);
+                if (index !== -1) {
+                    basket.splice(index, 1);
+                    localStorage.setItem('basket', JSON.stringify(basket));
+                    renderBasket();
+                }
+            };
+
+            renderBasket();
+        });
+    </script>
+</body>
+</html>
